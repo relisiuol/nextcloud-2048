@@ -8,7 +8,7 @@
 A Nextcloud app that lets you play 2048.
     ]]></description>
     <version>1.0.0</version>
-    <licence>public</licence>
+    <licence>GPL-3.0-or-later</licence>
     <author mail="contact@relisiuol.fr" homepage="https://relisiuol.fr">relisiuol</author>
     <namespace>twothousandandfortyeight</namespace>
     <category>games</category>
