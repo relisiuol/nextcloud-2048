@@ -7,7 +7,7 @@
 # 2048
 A Nextcloud app that lets you play 2048.
     ]]></description>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <licence>GPL-3.0-or-later</licence>
     <author mail="contact@relisiuol.fr" homepage="https://relisiuol.fr">relisiuol</author>
     <namespace>twothousandandfortyeight</namespace>
@@ -16,7 +16,7 @@ A Nextcloud app that lets you play 2048.
     <bugs>https://github.com/relisiuol/nextcloud-2048/issues</bugs>
     <screenshot>https://raw.githubusercontent.com/relisiuol/nextcloud-2048/master/2048.png</screenshot>
     <dependencies>
-        <nextcloud min-version="25" max-version="30"/>
+        <nextcloud min-version="25" max-version="31"/>
     </dependencies>
     <navigations>
         <navigation>
