@@ -1,12 +1,9 @@
 app_name=$(notdir $(CURDIR))
-source_build_directory=$(CURDIR)/build/artifacts/source
-source_package_name=$(source_build_directory)/$(app_name)
-appstore_build_directory=$(CURDIR)/build/artifacts/appstore
-appstore_package_name=$(appstore_build_directory)/$(app_name)
+build_directory=$(CURDIR)/build/artifacts
+package_name=$(build_directory)/$(app_name)
 composer=$(shell which composer 2> /dev/null)
 
-all: build 
-allnew: dev-setup lint build-js-production test
+all: appstore 
 
 write:
 	sudo chown -R www-data:$$(whoami) ../$(app_name) ; sudo chmod -R 775 ../$(app_name)
@@ -14,9 +11,9 @@ write:
 # Builds the source package for the app store, ignores php and js tests
 .PHONY: appstore
 appstore:
-	rm -rf $(appstore_build_directory)
-	mkdir -p $(appstore_build_directory)
-	tar cvzf $(appstore_package_name).tar.gz \
+	rm -rf $(build_directory)
+	mkdir -p $(build_directory)
+	tar cvzf $(package_name).tar.gz \
 	--exclude-vcs \
 	--exclude="../$(app_name)/build" \
 	--exclude="../$(app_name)/tests" \
