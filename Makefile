@@ -1,7 +1,6 @@
 app_name=$(notdir $(CURDIR))
 build_directory=$(CURDIR)/build/artifacts
 package_name=$(build_directory)/$(app_name)
-composer=$(shell which composer 2> /dev/null)
 
 all: appstore 
 
