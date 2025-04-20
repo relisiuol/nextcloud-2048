@@ -1,4 +1,4 @@
-app_name=$(CURDIR)
+app_name=$(notdir $(CURDIR))
 source_build_directory=$(CURDIR)/build/artifacts/source
 source_package_name=$(source_build_directory)/$(app_name)
 appstore_build_directory=$(CURDIR)/build/artifacts/appstore
